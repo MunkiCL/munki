@@ -11,3 +11,21 @@
  *= require_self
  *= require_tree .
  */
+
+
+div.logo{
+	width:223px;
+	margin:0 auto;
+}
+
+div.slogan{
+	font-family: 'Oleo Script', cursive;
+	margin:0 auto;
+	width: 450px;
+	color:#636598;
+}
+
+div.container{
+	position:relative;
+	top:120px;
+}
