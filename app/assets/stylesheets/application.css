@@ -24,7 +24,16 @@ div.slogan{
 	width: 450px;
 	color:#636598;
 }
+div.contacto{
+	font-family: 'Oleo Script', cursive;
+	margin:0 auto;
+	width: 110px;
+	color:#636598;
+}
 
+div.contacto a{
+	color:#636598;
+}
 div.container{
 	position:relative;
 	top:120px;
