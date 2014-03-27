@@ -203,7 +203,7 @@ module.exports = function (grunt) {
                     src: [
                         '<%= config.dist %>/scripts/{,*/}*.js',
                         '<%= config.dist %>/styles/{,*/}*.css',
-                        '<%= config.dist %>/images/{,*/}*.*',
+                        //'<%= config.dist %>/images/{,*/}*.*',
                         '<%= config.dist %>/styles/fonts/{,*/}*.*',
                         '<%= config.dist %>/*.{ico,png}'
                     ]
@@ -310,11 +310,20 @@ module.exports = function (grunt) {
                     dest: '<%= config.dist %>',
                     src: [
                         '*.{ico,png,txt}',
-                        '.htaccess',
-                        'images/{,*/}*.webp',
+                        'robots.txt',
+                        'Procfile',
+                        'web.js',
+                        'images/{,*/}*.*',
                         '{,*/}*.html',
                         'styles/fonts/{,*/}*.*'
                     ]
+                },
+                {
+                    expand: true,
+                    dot: true,
+                    cwd: '.tmp/styles',
+                    dest: '<%= config.dist %>/styles/',
+                    src: '{,*/}*.css'
                 }]
             },
             styles: {
@@ -348,12 +357,16 @@ module.exports = function (grunt) {
             test: [
                 'copy:styles'
             ],
-            dist: [
-                'compass',
+            dist:{
+                tasks:['compass',
                 'copy:styles',
                 'imagemin',
                 'svgmin'
-            ]
+                ],
+                options:{
+                    limit:4
+                }
+            }
         }
     });
 
@@ -397,11 +410,9 @@ module.exports = function (grunt) {
         'useminPrepare',
         'concurrent:dist',
         'autoprefixer',
-        'concat',
-        'cssmin',
-        'uglify',
         'copy:dist',
-        'modernizr',
+        'concat',
+        'uglify',
         'rev',
         'usemin',
         'htmlmin'

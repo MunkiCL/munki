@@ -25,7 +25,7 @@ body {
 }
 
 header {
-    background: #5a4282 url('../images/logo-footer.png') no-repeat center center;
+    background: #5a4282 url('/images//logo-footer.png') no-repeat center center;
     height: 55px;
     position: fixed;
     top: 0px;
@@ -54,14 +54,14 @@ p, ul{
 }
 
 #welcome {
-    background: #7954A1 url('../images/img-welcome.jpg') no-repeat center center;
+    background: #7954A1 url('/images//img-welcome.jpg') no-repeat center center;
     height: 649px;
     position: relative;
     display: block;
 }
 
 #welcome #logo {
-    background: url('../images/logo-munki.png') no-repeat center center;
+    background: url('/images//logo-munki.png') no-repeat center center;
     height: 193px;
     padding-top: 390px;
     position: relative;
@@ -92,15 +92,15 @@ p, ul{
 }
 
 #img-corp{
-    @include img-services('../images/corp.jpg');
+    @include img-services('/images//corp.jpg');
 }
 
 #img-web{
-    @include img-services('../images/web.jpg');
+    @include img-services('/images//web.jpg');
 }
 
 #img-proy{
-    @include img-services('../images/proy.jpg');
+    @include img-services('/images//proy.jpg');
 }
 
 .container{
@@ -166,14 +166,14 @@ p, ul{
 }
 
 .corp {
-    @include img-services-ext('../images/img-corp.png');
+    @include img-services-ext('/images//img-corp.png');
     @include gridle(6);
     @include gridle(12, mobile);
     @include gridle(12, tablet);
 }
 
 .web {
-    @include img-services-ext('../images/img-web.png');
+    @include img-services-ext('/images//img-web.png');
     @include gridle(6);
     @include gridle(12, mobile);
     @include gridle(12, tablet);
@@ -183,7 +183,7 @@ p, ul{
 }
 
 .proy {
-    @include img-services-ext('../images/img-proy.png');
+    @include img-services-ext('/images//img-proy.png');
     @include gridle(6);
     @include gridle(12, mobile);
     @include gridle(12, tablet);
