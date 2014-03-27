@@ -421,7 +421,7 @@ module.exports = function (grunt) {
         'svgmin',
         'concat',
         'uglify',
-        'rev',
+        // 'rev',
         'usemin',
         'htmlmin'
     ]);
