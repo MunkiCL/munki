@@ -258,7 +258,7 @@ module.exports = function (grunt) {
                 options: {
                     collapseBooleanAttributes: true,
                     collapseWhitespace: true,
-                    removeAttributeQuotes: true,
+                    removeAttributeQuotes: false,
                     removeCommentsFromCDATA: true,
                     removeEmptyAttributes: true,
                     removeOptionalTags: true,
@@ -323,7 +323,7 @@ module.exports = function (grunt) {
                     dot: true,
                     cwd: '.tmp/styles',
                     dest: '<%= config.dist %>/styles/',
-                    src: '{,*/}*.css'
+                    src: 'main.css'
                 }]
             },
             styles: {
@@ -408,9 +408,11 @@ module.exports = function (grunt) {
     grunt.registerTask('build', [
         'clean:dist',
         'useminPrepare',
-        'concurrent:dist',
+        'compass:dist',
         'autoprefixer',
         'copy:dist',
+        'imagemin',
+        'svgmin',
         'concat',
         'uglify',
         'rev',
