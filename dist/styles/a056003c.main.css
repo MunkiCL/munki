@@ -10432,7 +10432,7 @@ body {
 /* line 27, ../../app/styles/main.scss */
 
 header {
-  background: #5a4282 url("/images//logo-footer.png") no-repeat center center;
+  background: #5a4282 url("/images//e247ac45.logo-footer.png") no-repeat center center;
   height: 55px;
   position: fixed;
   top: 0px;
@@ -10478,7 +10478,7 @@ ul {
 /* line 56, ../../app/styles/main.scss */
 
 #welcome {
-  background: #7954a1 url("/images//img-welcome.jpg") no-repeat center center;
+  background: #7954a1 url("/images//c23d1397.img-welcome.jpg") no-repeat center center;
   height: 649px;
   position: relative;
   display: block;
@@ -10487,7 +10487,7 @@ ul {
 /* line 63, ../../app/styles/main.scss */
 
 #welcome #logo {
-  background: url("/images//logo-munki.png") no-repeat center center;
+  background: url("/images//9ad4533d.logo-munki.png") no-repeat center center;
   height: 193px;
   padding-top: 390px;
   position: relative;
@@ -10618,7 +10618,7 @@ html.mobile .features li:last-child {
 /* line 94, ../../app/styles/main.scss */
 
 #img-corp {
-  background: url("/images//corp.jpg") no-repeat center center;
+  background: url("/images//5bbce246.corp.jpg") no-repeat center center;
   height: 126px;
   margin: 20px 0;
 }
@@ -10626,7 +10626,7 @@ html.mobile .features li:last-child {
 /* line 98, ../../app/styles/main.scss */
 
 #img-web {
-  background: url("/images//web.jpg") no-repeat center center;
+  background: url("/images//629187a0.web.jpg") no-repeat center center;
   height: 126px;
   margin: 20px 0;
 }
@@ -10634,7 +10634,7 @@ html.mobile .features li:last-child {
 /* line 102, ../../app/styles/main.scss */
 
 #img-proy {
-  background: url("/images//proy.jpg") no-repeat center center;
+  background: url("/images//19c069b1.proy.jpg") no-repeat center center;
   height: 126px;
   margin: 20px 0;
 }
@@ -10897,7 +10897,7 @@ html.tablet .text li:last-child {
 /* line 168, ../../app/styles/main.scss */
 
 .corp {
-  background: url("/images//img-corp.png") no-repeat center center;
+  background: url("/images//360b7a02.img-corp.png") no-repeat center center;
   height: 297px;
   float: right;
   float: left;
@@ -11018,7 +11018,7 @@ html.tablet .corp.gridle-debug.parent:before {
 /* line 175, ../../app/styles/main.scss */
 
 .web {
-  background: url("/images//img-web.png") no-repeat center center;
+  background: url("/images//53ea4e17.img-web.png") no-repeat center center;
   height: 297px;
   float: right;
   float: left;
@@ -11153,7 +11153,7 @@ html.mobile .web {
 /* line 185, ../../app/styles/main.scss */
 
 .proy {
-  background: url("/images//img-proy.png") no-repeat center center;
+  background: url("/images//af30f414.img-proy.png") no-repeat center center;
   height: 297px;
   float: right;
   float: left;
