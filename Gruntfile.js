@@ -146,19 +146,25 @@ module.exports = function (grunt) {
                 sassDir: '<%= config.app %>/styles',
                 cssDir: '.tmp/styles',
                 generatedImagesDir: '.tmp/images/generated',
-                imagesDir: '<%= config.app %>/images',
+                // imagesDir: '<%= config.app %>/images',
                 javascriptsDir: '<%= config.app %>/scripts',
                 fontsDir: '<%= config.app %>/styles/fonts',
                 importPath: '<%= config.app %>/components',
-                httpImagesPath: '/images',
-                httpGeneratedImagesPath: '/images/generated',
+                // httpImagesPath: '/images',
+                // httpGeneratedImagesPath: '/images/generated',
                 httpFontsPath: '/styles/fonts',
                 relativeAssets: false,
                 assetCacheBuster: false
+
             },
             dist: {
                 options: {
-                    generatedImagesDir: '<%= config.dist %>/images/generated'
+                    generatedImagesDir: '<%= config.dist %>/images/generated',
+                    outputStyle:'compressed',
+                    noLineComments:true,
+                    environment:'production',
+                    force:true
+
                 }
             },
             server: {
@@ -170,15 +176,15 @@ module.exports = function (grunt) {
 
         // Add vendor prefixed styles
         autoprefixer: {
-            options: {
-                browsers: ['last 1 version']
-            },
+            // options: {
+            //     browsers: ['last 1 version']
+            // },
             dist: {
                 files: [{
                     expand: true,
-                    cwd: '.tmp/styles/',
-                    src: '{,*/}*.css',
-                    dest: '.tmp/styles/'
+                    cwd: '<%= config.dist %>/styles/',
+                    src: '*.css',
+                    dest: '<%= config.dist %>/styles/'
                 }]
             }
         },
@@ -203,7 +209,7 @@ module.exports = function (grunt) {
                     src: [
                         '<%= config.dist %>/scripts/{,*/}*.js',
                         '<%= config.dist %>/styles/{,*/}*.css',
-                        '<%= config.dist %>/images/{,*/}*.*',
+                        // '<%= config.dist %>/images/{,*/}*.*',
                         '<%= config.dist %>/styles/fonts/{,*/}*.*',
                         '<%= config.dist %>/*.{ico,png}'
                     ]
@@ -313,7 +319,7 @@ module.exports = function (grunt) {
                         'robots.txt',
                         'Procfile',
                         'web.js',
-                        'images/{,*/}*.*',
+                        // 'images/{,*/}*.*',
                         '{,*/}*.html',
                         'styles/fonts/{,*/}*.*'
                     ]
@@ -421,7 +427,7 @@ module.exports = function (grunt) {
         'svgmin',
         'concat',
         'uglify',
-        // 'rev',
+        'rev',
         'usemin',
         'htmlmin'
     ]);
