@@ -43,6 +43,7 @@ module.exports = function (grunt) {
         },
         files: [
           '.jekyll/**/*.html',
+          '<%= yeoman.app %>/*.html',
           '.tmp/css/**/*.css',
           '{.tmp,<%= yeoman.app %>}/<%= js %>/**/*.js',
           '<%= yeoman.app %>/images/**/*.{gif,jpg,jpeg,png,svg,webp}'
@@ -178,7 +179,7 @@ module.exports = function (grunt) {
       options: {
         dest: '<%= yeoman.dist %>'
       },
-      html: '<%= yeoman.dist %>/index.html'
+      html: '<%= yeoman.dist %>/*.html'
     },
     usemin: {
       options: {
