@@ -25,6 +25,7 @@ paginate_path: 'page:num'
 
 # Markdown library
 markdown: kramdown
+
 #   auto_ids: true
 #   footnote_nr: 1
 #   entity_output: as_char
@@ -39,3 +40,7 @@ markdown: kramdown
 #     coderay_css: style
 
 pygments: true
+disqus:
+    shortname: 'munkistudio'
+timezone: America/Santiago
+
