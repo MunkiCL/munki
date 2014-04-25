@@ -186,7 +186,7 @@ module.exports = function (grunt) {
         assetsDirs: '<%= yeoman.dist %>',
       },
       html: ['<%= yeoman.dist %>/**/*.html'],
-      css: ['<%= yeoman.dist %>/css/**/*.css']
+      css: ['<%= yeoman.dist %>/munki/css/**/*.css']
     },
     htmlmin: {
       dist: {
@@ -329,6 +329,21 @@ module.exports = function (grunt) {
         'compass:dist',
         'copy:dist'
       ]
+    },
+    shell:{
+      production:{
+        options:{
+          stdout:true
+        },
+        command:"bash set_baseurl.sh production" //reemplazar baseurl por munki
+      },
+      development:{
+        options:{
+          stdout:true
+        },
+        command:"bash set_baseurl.sh development" //reemplazar baseurl por munki
+      }
+
     }
   });
 
@@ -340,6 +355,7 @@ module.exports = function (grunt) {
 
     grunt.task.run([
       'clean:server',
+      'shell:development',
       'concurrent:server',
       'autoprefixer:server',
       'connect:livereload',
@@ -371,6 +387,7 @@ module.exports = function (grunt) {
     'clean',
     // Jekyll cleans files from the target directory, so must run first
     'jekyll:dist',
+    //'shell:production',
     'concurrent:dist',
     'useminPrepare',
     'concat',

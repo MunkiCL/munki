@@ -8,7 +8,7 @@ description: Munki Studio Home
 author:
   name: Matias Hernandez Arellano
   email: matias@munki.cl
-baseurl:  /munki
+baseurl:  
 
 # Grunt handles images and assets.
 exclude: ['images', 'css', 'js', 'fonts',
@@ -41,7 +41,6 @@ markdown: kramdown
 #     coderay_css: style
 
 pygments: true
-disqus:
-    shortname: 'munkistudio'
+
 timezone: America/Santiago
 
