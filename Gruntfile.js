@@ -166,6 +166,7 @@ module.exports = function (grunt) {
       server: {
         options: {
           config: '_config.yml',
+          baseurl:'',
           dest: '.jekyll'
         }
       },
@@ -186,14 +187,14 @@ module.exports = function (grunt) {
         assetsDirs: '<%= yeoman.dist %>',
       },
       html: ['<%= yeoman.dist %>/**/*.html'],
-      css: ['<%= yeoman.dist %>/munki/css/**/*.css']
+      css: ['<%= yeoman.dist %>/css/**/*.css']
     },
     htmlmin: {
       dist: {
         options: {
           collapseWhitespace: true,
           collapseBooleanAttributes: true,
-          removeAttributeQuotes: true,
+          removeAttributeQuotes: false,
           removeRedundantAttributes: true
         },
         files: [{
