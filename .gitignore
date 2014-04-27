@@ -37,3 +37,4 @@ app/__components
 dist
 node_modules
 .tmp
+.sass-cache
