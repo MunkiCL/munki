@@ -295,8 +295,8 @@ module.exports = function (grunt) {
       dist: {
         options: {
           dir:'dist',
-          remote: 'git@github.com:MunkiStudio/munki.git',
-          branch: 'gh-pages',
+          remote: 'git@github.com:MunkiStudio/munkistudio.github.io.git',
+          branch: 'master',
           commit: true,
           push: true
         }
