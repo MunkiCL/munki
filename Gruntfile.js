@@ -253,6 +253,7 @@ module.exports = function (grunt) {
             // Jekyll processes and moves HTML and text files.
             // Usemin moves CSS and javascript inside of Usemin blocks.
             // Copy moves asset files and directories.
+            '../CNAME',
             'images/**/*',
             'fonts/**/*',
             // Like Jekyll, exclude files & folders prefixed with an underscore.
@@ -353,6 +354,12 @@ module.exports = function (grunt) {
           stdout:true
         },
         command:'bash deploy.sh'
+      },
+      install:{
+        options:{
+          stdout:true
+        },
+        command:'bundle install && npm install && bower install'
       }
 
     }
@@ -374,6 +381,10 @@ module.exports = function (grunt) {
     ]);
   });
 
+
+  grunt.registerTask('init',[
+    'shell:install'
+  ]);
   grunt.registerTask('server', function () {
     grunt.log.warn('The `server` task has been deprecated. Use `grunt serve` to start a server.');
     grunt.task.run(['serve']);
