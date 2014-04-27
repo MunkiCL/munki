@@ -1,11 +1,9 @@
 $(window).scroll(function(){
     if($(this).scrollTop() > 625){
-        $('header').slideDown()
-
+        $('header').slideDown();
 
     }else{
-        $('header').slideUp()
-
+        $('header').slideUp();
 
     }
 });

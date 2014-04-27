@@ -180,14 +180,17 @@ module.exports = function (grunt) {
       options: {
         dest: '<%= yeoman.dist %>'
       },
-      html: '<%= yeoman.dist %>/*.html'
+      html: {
+       src:['<%= yeoman.dist %>/index.html','<%= yeoman.dist %>/blog/index.html']
+      }
     },
     usemin: {
       options: {
-        assetsDirs: '<%= yeoman.dist %>',
+        assetsDirs: ['<%=yeoman.dist %>'],
       },
       html: ['<%= yeoman.dist %>/**/*.html'],
-      css: ['<%= yeoman.dist %>/css/**/*.css']
+      css: ['<%= yeoman.dist %>/**/*.css']
+
     },
     htmlmin: {
       dist: {
@@ -280,8 +283,8 @@ module.exports = function (grunt) {
       dist: {
         files: [{
           src: [
-            '<%= yeoman.dist %>/js/**/*.js',
-            '<%= yeoman.dist %>/css/**/*.css',
+            '<%= yeoman.dist %>/**/*.js',
+            '<%= yeoman.dist %>/**/*.css',
             '<%= yeoman.dist %>/images/**/*.{gif,jpg,jpeg,png,svg,webp}',
             '<%= yeoman.dist %>/fonts/**/*.{eot*,otf,svg,ttf,woff}'
           ]
@@ -291,7 +294,8 @@ module.exports = function (grunt) {
     buildcontrol: {
       dist: {
         options: {
-          remote: '../',
+          dir:'dist',
+          remote: 'git@github.com:MunkiStudio/munki.git',
           branch: 'gh-pages',
           commit: true,
           push: true
@@ -336,13 +340,19 @@ module.exports = function (grunt) {
         options:{
           stdout:true
         },
-        command:"bash set_baseurl.sh production" //reemplazar baseurl por munki
+        command:'bash set_baseurl.sh production' //reemplazar baseurl por munki
       },
       development:{
         options:{
           stdout:true
         },
-        command:"bash set_baseurl.sh development" //reemplazar baseurl por munki
+        command:'bash set_baseurl.sh development' //reemplazar baseurl por munki
+      },
+      deploy:{
+        options:{
+          stdout:true
+        },
+        command:'bash deploy.sh'
       }
 
     }
@@ -356,7 +366,7 @@ module.exports = function (grunt) {
 
     grunt.task.run([
       'clean:server',
-      'shell:development',
+      // 'shell:development',
       'concurrent:server',
       'autoprefixer:server',
       'connect:livereload',
@@ -379,16 +389,16 @@ module.exports = function (grunt) {
   grunt.registerTask('check', [
     'clean:server',
     'jekyll:check',
-    'compass:server',
-    'jshint:all',
-    'csslint:check'
+    'compass:server'//,
+    // 'jshint:all',
+    // 'csslint:check'
   ]);
 
   grunt.registerTask('build', [
     'clean',
     // Jekyll cleans files from the target directory, so must run first
     'jekyll:dist',
-    'shell:production',
+    // 'shell:production',
     'concurrent:dist',
     'useminPrepare',
     'concat',
