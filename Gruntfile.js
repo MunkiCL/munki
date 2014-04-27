@@ -388,7 +388,7 @@ module.exports = function (grunt) {
     'clean',
     // Jekyll cleans files from the target directory, so must run first
     'jekyll:dist',
-    //'shell:production',
+    'shell:production',
     'concurrent:dist',
     'useminPrepare',
     'concat',

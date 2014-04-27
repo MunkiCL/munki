@@ -43,4 +43,5 @@ markdown: kramdown
 pygments: true
 
 timezone: America/Santiago
+baseurl: 
 
