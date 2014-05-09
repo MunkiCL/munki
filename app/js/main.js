@@ -1,4 +1,9 @@
 $(window).scroll(function(){
+	if($(this).scrollTop() > 10){
+		$('.welcome').addClass('blur');
+	}else{
+		$('.welcome').removeClass('blur');
+	}
     if($(this).scrollTop() > 625){
         $('header').slideDown();
 

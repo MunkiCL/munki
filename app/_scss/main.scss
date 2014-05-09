@@ -51,8 +51,16 @@ p, ul{
 #welcome {
     background: #7954A1 url('#{$baseurl}/images/img-welcome.jpg') no-repeat center center;
     height: 649px;
-    position: relative;
+    position:fixed;
+    z-index:1;
+    top:0;
+    left:0;
+    width:100%;
     display: block;
+    background-size: cover;
+    &.blur{
+        filter: blur(5px);
+    }
 }
 
 #welcome #logo {
@@ -60,6 +68,15 @@ p, ul{
     height: 193px;
     padding-top: 390px;
     position: relative;
+}
+
+.content{
+    position:relative;
+    z-index:10;
+    margin-top:100%;
+    height: 100%;
+    width:100%;
+    background-color:white;
 }
 
 .hacemos {

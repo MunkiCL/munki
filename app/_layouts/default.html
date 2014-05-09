@@ -39,23 +39,27 @@
           <div id="logo"></div>
         </div>
         <header></header>
-        {{ content }}
+        <div class="content">
+          {{ content }}
+          <footer>
+            <div class="container2">
+              <div class="datos">
+                <img rel="subresource" src="/images/munki-footer.png" alt="Munki" width="35" height="31"/>
+                <h5>Munki</h5>
+                <p>¡Más peligrosos que monos con ideas!</p>
+              </div>
+              <div class="redes" >
+                <ul>
+                  <li> <a href="https://github.com/MunkiStudio" target="_blank"><img rel="subresource" width="34" height="34" src="/images/git-white.png" alt="Github" /></a></li>
+                  <li><a href="https://www.facebook.com/munkistudio" target="_blank"><img rel="subresource" width="34" height="34" src="/images/fb-white.png" alt="Facebook" /></a></li>
+                </ul>
+              </div>
+            </div>
+          </footer>
         
-        <footer>
-          <div class="container2">
-            <div class="datos">
-              <img rel="subresource" src="/images/munki-footer.png" alt="Munki" width="35" height="31"/>
-              <h5>Munki</h5>
-              <p>¡Más peligrosos que monos con ideas!</p>
-            </div>
-            <div class="redes" >
-              <ul>
-                <li> <a href="https://github.com/MunkiStudio" target="_blank"><img rel="subresource" width="34" height="34" src="/images/git-white.png" alt="Github" /></a></li>
-                <li><a href="https://www.facebook.com/munkistudio" target="_blank"><img rel="subresource" width="34" height="34" src="/images/fb-white.png" alt="Facebook" /></a></li>
-              </ul>
-            </div>
-          </div>
-        </footer>
+        </div>
+        
+        
         <!-- build:js({app,.tmp}) {{site.baseurl}}/js/main.js -->
         <script src="/_components/jquery/jquery.min.js" rel="subresource"></script>
         <script src="/js/main.js" rel="subresource"></script>
