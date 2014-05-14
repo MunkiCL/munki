@@ -253,7 +253,6 @@ module.exports = function (grunt) {
             // Jekyll processes and moves HTML and text files.
             // Usemin moves CSS and javascript inside of Usemin blocks.
             // Copy moves asset files and directories.
-            '../CNAME',
             'images/**/*',
             'fonts/**/*',
             // Like Jekyll, exclude files & folders prefixed with an underscore.
@@ -265,6 +264,15 @@ module.exports = function (grunt) {
           ],
           dest: '<%= yeoman.dist %>'
         }]
+      },
+      cname:{
+        expand:true,
+        dot:true,
+        cwd:'<%= yeoman.app %>',
+        src:[
+          'CNAME'
+        ],
+        dest:'<%= yeoman.dist %>'
       },
       // Copy CSS into .tmp directory for Autoprefixer processing
       stageCss: {
@@ -420,7 +428,8 @@ module.exports = function (grunt) {
     'svgmin',
     'filerev',
     'usemin',
-    'htmlmin'
+    'htmlmin',
+    'copy:cname'
     ]);
 
   grunt.registerTask('deploy', [
