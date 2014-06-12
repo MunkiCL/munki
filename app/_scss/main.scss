@@ -13,12 +13,12 @@
 @include gridle_register_state( "giant" , 1300px , null );
 
 //style
-
-
-
 body {
     margin: 0;
 }
+
+//includes
+@import "proyectos";
 
 header {
     background: #5a4282 url('#{$baseurl}/images/logo-footer.png') no-repeat center center;
@@ -215,47 +215,7 @@ p, ul{
     @include gridle(12, tablet);
 }
 
-#proyectos {
-	width: 100%;
-	margin-bottom: 20px;
-	.project {
-		@include gridle(6);
-		@include gridle(12, mobile tablet);
-		@include gridle(3, giant);
-		height: 320px;
-		&:last-child{
-			margin-bottom: 50px;
-		}
-		&#viverelajacion {
-			background: #1881af url('#{$baseurl}/images/proyectos/viverelajacion-wip.png') no-repeat center;
-			@include transition(0.4s);
-			&:hover {
-				background-color: darken(#1881af, 10%);
-			}
-		}
-		&#ayelen {
-			background: #e4ae2f url('#{$baseurl}/images/proyectos/ayelen.png') no-repeat center;
-			@include transition(0.4s);
-			&:hover {
-				background-color: darken(#e4ae2f, 10%);
-			}
-		}
-		&#ecotetera {
-			background: #babb2e url('#{$baseurl}/images/proyectos/ecotetera.png') no-repeat center;
-			@include transition(0.4s);
-			&:hover {
-				background-color: darken(#babb2e, 10%);
-			}
-		}
-		&#offers {
-			background: #c61732 url('#{$baseurl}/images/proyectos/offers-wip.png') no-repeat center;
-			@include transition(0.4s);
-			&:hover {
-				background-color: darken(#c61732, 10%);
-			}
-		}
-	}
-}
+
 
 #nosotros {
     @include width;
