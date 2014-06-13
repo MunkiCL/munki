@@ -42,18 +42,35 @@
 			padding:0;
 			.image{
 				@include gridle(8);
-				@include gridle(12, mobile tablet);
+				@include gridle(8, mobile);
 				z-index:1;
+				height:700px;
 				&.left{
 					margin-left: -10px;
+					img{
+						margin-left: -10px;
+					}
 				}
 				&.right{
 					margin-right: -10px;	
 				}
+				&.ecotetera{
+					background: #fff url('#{$baseurl}/images/proyectos/ecotetera.png') no-repeat center center;
+				}
+				&.ayelen{
+					background: #fff url('#{$baseurl}/images/proyectos/ayelen.png') no-repeat center center;	
+				}
+				&.viverelajacion{
+					background: #fff url('#{$baseurl}/images/proyectos/viverelajacion.png') no-repeat center center;	
+				}
+				&.offers{
+					background: #fff url('#{$baseurl}/images/proyectos/offers.png') no-repeat center center;	
+				}
 			}
 			.text{
 				@include gridle(4);
-				@include gridle(3, mobile tablet);
+				@include gridle(4, tablet);
+				@include gridle_hide( mobile);
 				z-index:90;
 				background-color:#fff;
 				height:100%;
@@ -63,15 +80,22 @@
 					strong{
 						color:#5b83ac;
 					}
+					@include gridle_state(mobile table) {
+			        	font-size: 22px;
+			        }
 
 				}
 				p{
 					color:#181818;
 					@include open-sans(400, 14px, black);
-					line-height: 28px;
+					line-height: 14x;
+					@include gridle_state(mobile table) {
+			        	font-size: 12px;
+			        }
 
 				}
 				a.button{
+					top:20%;
 					color:#181818;
 					width:200px;
 					height:50px;
@@ -80,13 +104,17 @@
 					position:relative;
 					display:block;
 					border:1px #222 dotted;
-					margin-left:20%;
+					margin-left:25%;
+					margin-right:25%;
 					@include transition(0.4s);
-					&:hover{
-						&:hover {
-							background-color: darken(#fff, 10%);
-						}
+					@include gridle_state(mobile table) {
+			        	width:120px;
+			        	margin-left:2%;
+			        }
+					&:hover {
+						background-color: darken(#fff, 10%);
 					}
+					
 					.label{
 						position:absolute;
 						top:0;
@@ -97,16 +125,13 @@
 						padding: 0 45px;
 						font-size: 18px;
 						font-family: 'Helvetica Neue', Verdana, sans-serif;
+						@include gridle_state(mobile table) {
+				        	font-size:16px;
+				        	left:-25px;
+
+				        }
 					}
 				}
-			}
-			.left{
-				margin-left:0;
-				float:left;
-			}
-			.right{
-				float:right;
-				margin-right: 0;
 			}
 		}
 	}
