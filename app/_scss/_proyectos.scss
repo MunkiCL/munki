@@ -66,6 +66,9 @@
 				&.offers{
 					background: #fff url('#{$baseurl}/images/proyectos/offers.png') no-repeat center center;	
 				}
+				&.sibib{
+					background: #fff url('#{$baseurl}/images/proyectos/sibib.png') no-repeat center center;	
+				}
 			}
 			.text{
 				@include gridle(4);
@@ -75,10 +78,11 @@
 				background-color:#fff;
 				height:100%;
 				h2{
-					@include open-sans(800, 30px, black);
+					@include open-sans(800, 25px,$purple );
 					text-transform: uppercase;
+					text-align: left;
 					strong{
-						color:#5b83ac;
+						color:$gris;
 					}
 					@include gridle_state(mobile table) {
 			        	font-size: 22px;
@@ -86,17 +90,20 @@
 
 				}
 				p{
-					color:#181818;
-					@include open-sans(400, 14px, black);
+					font-family: 'Pontano Sans', Helvetica, Arial, sans-serif;
+				    font-size: 14px;
+				    color:$gris;
 					line-height: 14x;
 					@include gridle_state(mobile table) {
 			        	font-size: 12px;
 			        }
+			        text-align:left;
+			        text-transform: none;
 
 				}
 				a.button{
 					top:20%;
-					color:#181818;
+					color:$gris;
 					width:200px;
 					height:50px;
 					box-sizing:border-box;
@@ -124,7 +131,7 @@
 						line-height:50px;
 						padding: 0 45px;
 						font-size: 18px;
-						font-family: 'Helvetica Neue', Verdana, sans-serif;
+						font-family: 'Pontano Sans', Helvetica, Arial, sans-serif;
 						@include gridle_state(mobile table) {
 				        	font-size:16px;
 				        	left:-25px;
