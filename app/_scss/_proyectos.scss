@@ -99,10 +99,26 @@
 			        }
 			        text-align:left;
 			        text-transform: none;
+			        strong{
+			        	font-family: 'Roboto', sans-serif;
+			        	font-weight: 700;
+			        }
 
 				}
+				.quote{
+					background: url('/images/comillas1.png') no-repeat left top, url('/images/comillas2.png') no-repeat right bottom;
+					padding:0;
+		            height:120px;
+		            p{
+		            	top: 35%;
+						position: relative;
+						width: 90%;
+						margin-left:5%;
+						margin-right: 5%;
+		            }
+				}
 				a.button{
-					top:20%;
+					top:5%;
 					color:$gris;
 					width:200px;
 					height:50px;
