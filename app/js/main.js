@@ -23,8 +23,8 @@ $(document).ready(function(){
 	var glide = $('.slider').glide({
 		arrowRightText: '',
 		arrowLeftText: '',
-		autoplay: false,
-		circular: false,
+		autoplay:7000,
+		circular: true,
 		navigation:false
 		// beforeTransition: function() {
 		// 	$(slides).eq(-this.currentSlide).removeClass('fadeInUpBig').addClass('fadeOutDownBig');
