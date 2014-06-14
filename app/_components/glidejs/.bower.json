@@ -9,6 +9,5 @@
   },
   "_source": "git://github.com/jedrzejchalubek/Glide.js.git",
   "_target": "*",
-  "_originalSource": "glidejs",
-  "_direct": true
+  "_originalSource": "glidejs"
 }
