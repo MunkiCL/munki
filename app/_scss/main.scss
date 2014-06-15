@@ -19,72 +19,17 @@ body {
 
 //includes
 @import "proyectos";
+@import "layout";
 
-header {
-    background: #5a4282 url('#{$baseurl}/images/logo-footer.png') no-repeat center center;
-    height: 55px;
-    position: fixed;
-    top: 0px;
-    left: 0;
-    width: 100%;
-    display:none;
-    z-index:9999;
-}
-
-h2 {
-    @include open-sans(300, 25px, $purple);
-    margin-top: 50px;
-    margin-bottom: 30px;
-}
-
-h4 {
-    @include oleo(300, 22px, $purple);
-    text-align: center;
-    margin-bottom: 0;
-}
-
-p, ul{
-    font-family: 'Pontano Sans', Helvetica, Arial, sans-serif;
-    font-size: 13px;
-    color:$gris;
-}
-
-#welcome {
-    background: #7954A1 url('#{$baseurl}/images/img-welcome.jpg') no-repeat center center;
-    height: 650px;
-    position:fixed;
-    z-index:1;
-    top:0;
-    left:0;
-    width:100%;
-    display: block;
-    background-size: cover;
-    &.blur{
-        filter: blur(5px);
-    }
-}
-
-#welcome #logo {
-    background: url('#{$baseurl}/images/logo-munki.png') no-repeat center center;
-    height: 193px;
-    padding-top: 390px;
-    position: relative;
-}
-
-.content{
-    position:relative;
-    z-index:10;
-    margin-top:650px;
-    height: 100%;
-    width:100%;
-    background-color: white;
-}
 
 .hacemos {
     @include width;
     padding-bottom: 30px;
     h2 {
     	padding-top: 40px;
+    }
+    &.quote{
+        background: url('/images/comillas1.png') no-repeat left top, url('/images/comillas2.png') no-repeat right bottom;
     }
 }
 
@@ -291,59 +236,4 @@ ul.redes-sociales {
     }
 }
 
-footer {
-    clear: both;
-    background: #393939;
-    padding: 10px;
-}
 
-.container2 {
-    @include width;
-    height:50px;
-}
-
-.datos {
-    @include gridle(6);
-    @include gridle(6, mobile);
-    img {
-        float: left;
-        margin-right: 10px;
-        @include gridle_hide(mobile);
-    }
-    h5 {
-        @include oleo(800, 20px, #fff);
-        margin: 0 10px;
-        line-height: 1em;
-    }
-    p {
-        font-size: 12px;
-        color: #fff;
-        margin: 0 10px;
-    }
-}
-
-
-.redes {
-    @include gridle(6);
-    @include gridle(6, mobile);
-    ul{
-    margin: 0;
-    display: inline-box;
-    }
-    li {
-    list-style: none;
-    }
-    a img{
-        float: right;
-        width: 34px;
-        margin-left: 5px;
-        -ms-filter: "progid_DXImageTransform.Microsoft.Alpha(Opacity=100)";
-        // -webkit-transition: opacity 0.25s ease-in-out;
-        // -moz-transition: opacity 0.25s ease-in-out;
-        transition: opacity 0.25s ease-in-out;
-    }
-    a:hover img{
-        opacity: 0.75;
-        -ms-filter: "progid_DXImageTransform.Microsoft.Alpha(Opacity=75)";
-    }
-}

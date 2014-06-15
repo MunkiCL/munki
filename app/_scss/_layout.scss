@@ -1,0 +1,196 @@
+header {
+    background: #5a4282 url('#{$baseurl}/images/logo-footer.png') no-repeat center center;
+    height: 55px;
+    position: fixed;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    z-index:9999;
+    transition: 0.3s ease-in-out all;
+    &.hidden{
+        height:0;
+    }
+}
+
+h2 {
+    @include open-sans(300, 25px, $purple);
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+h4 {
+    @include oleo(300, 22px, $purple);
+    text-align: center;
+    margin-bottom: 0;
+}
+
+p, ul{
+    font-family: 'Pontano Sans', Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    color:$gris;
+}
+
+#welcome {
+    background: #7954A1 url('#{$baseurl}/images/img-welcome.jpg') no-repeat center center;
+    height: 650px;
+    position:fixed;
+    z-index:1;
+    top:0;
+    left:0;
+    width:100%;
+    display: block;
+    background-size: cover;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    &.blur{
+        filter: blur(5px);
+    }
+    .hero-info{
+        padding: 1.2em 0 0 0;
+        position: absolute;
+        top: 58%;
+        left: 0;
+        right: 35%;
+        background-color: rgba(10,10,10,0.6);
+        color: #fff;
+        transition: 0.5s ease-in-out all;
+        @include gridle_hide(mobile);
+        h1{
+            margin: 0;
+            font-size: 3em;
+            width:90%;
+            padding: 0 20px 0 0;
+            float: right;
+            clear: both;
+            line-height: 1;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-shadow: -0.1em 0.1em 0 rgba(20,20,20,0.25);
+            color:#fff;
+        }
+        p{
+            font-size: 1.5em;
+            line-height: 1.2;
+            margin: 0.6em 0 1.1em;
+            width:90%;
+            padding: 0 20px 0 0;
+            float: right;
+            clear: both;
+        }
+        h2{
+            margin: 0 0 .6em 0;
+            font-size: 1.5em;
+            font-weight: 100;
+            position: relative;
+            text-transform: uppercase;
+            background-color: #c1d72e;
+            color: #2c3138;
+            height: 32px;
+            line-height: 1.2;
+            display: block;
+            &:after{
+                content: "";
+                display: table;
+            }
+            span{
+                @include gridle(5);
+                @include gridle(5,mobile);
+                padding: 0 20px 0 0;
+                // float: right;
+                clear: both;
+            }
+            b{
+                width: 20px;
+                position: absolute;
+                right: -20px;
+                top: 0;
+                background-color: #c1d72e;
+                height: 32px;
+                &:after{
+                    width: 0;
+                    height: 0;
+                    position: absolute;
+                    top: 32px;
+                    left: 0;
+                    border-style: solid;
+                    border-width: 10px;
+                    border-color: #434C05 transparent transparent #434C05;
+                    content: '';
+                }
+            }
+        }
+    }
+}
+
+#welcome #logo {
+    background: url('#{$baseurl}/images/logo-munki.png') no-repeat center center;
+    height: 193px;
+    padding-top: 390px;
+    position: relative;
+}
+
+.content{
+    position:relative;
+    z-index:10;
+    margin-top:650px;
+    height: 100%;
+    width:100%;
+    background-color: white;
+}
+
+footer {
+    clear: both;
+    background: #393939;
+    padding: 10px;
+}
+
+.container2 {
+    @include width;
+    height:50px;
+}
+
+.datos {
+    @include gridle(6);
+    @include gridle(6, mobile);
+    img {
+        float: left;
+        margin-right: 10px;
+        @include gridle_hide(mobile);
+    }
+    h5 {
+        @include oleo(800, 20px, #fff);
+        margin: 0 10px;
+        line-height: 1em;
+    }
+    p {
+        font-size: 12px;
+        color: #fff;
+        margin: 0 10px;
+    }
+}
+
+
+.redes {
+    @include gridle(6);
+    @include gridle(6, mobile);
+    ul{
+    margin: 0;
+    display: inline-box;
+    }
+    li {
+    list-style: none;
+    }
+    a img{
+        float: right;
+        width: 34px;
+        margin-left: 5px;
+        -ms-filter: "progid_DXImageTransform.Microsoft.Alpha(Opacity=100)";
+        // -webkit-transition: opacity 0.25s ease-in-out;
+        // -moz-transition: opacity 0.25s ease-in-out;
+        transition: opacity 0.25s ease-in-out;
+    }
+    a:hover img{
+        opacity: 0.75;
+        -ms-filter: "progid_DXImageTransform.Microsoft.Alpha(Opacity=75)";
+    }
+}

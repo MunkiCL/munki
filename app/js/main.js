@@ -1,16 +1,11 @@
 $(document).ready(function(){
 	$(window).scroll(function(){
-		if($(this).scrollTop() > 10){
-			$('.welcome').addClass('blur');
+		if($(this).scrollTop() > 625){
+	        // $('header').slideDown();
+	        $('header').removeClass('hidden');
 		}else{
-			$('.welcome').removeClass('blur');
-		}
-	    if($(this).scrollTop() > 625){
-	        $('header').slideDown();
-
-	    }else{
-	        $('header').slideUp();
-
+	        // $('header').slideUp();
+	        $('header').addClass('hidden');
 	    }
 	});
 
@@ -34,6 +29,8 @@ $(document).ready(function(){
 		// 	$(slides).eq(-this.currentSlide).removeClass('fadeOutDownBig').addClass('fadeInUpBig');
 		// }
 	});
+
+	// $('.hero-info').css('right','35%');
 	
 });
 
