@@ -131,7 +131,7 @@
 				z-index:90;
 				padding: 0 40px;
 				background-color:#fff;
-				@include gridle_state(mobile) {
+				@include gridle_state(mobile tablet) {
 					padding: 0 15px;
 				}
 				h2{
