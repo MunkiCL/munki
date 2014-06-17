@@ -1,3 +1,7 @@
+html {
+	-webkit-font-smoothing: antialiased;
+}
+
 header {
     background: #5a4282 url('#{$baseurl}/images/logo-footer.png') no-repeat center center;
     height: 55px;
@@ -7,6 +11,9 @@ header {
     width: 100%;
     z-index:9999;
     transition: 0.3s ease-in-out all;
+    @include gridle_state(mobile tablet) {
+    	height: 45px;
+    }
     &.hidden{
         height:0;
     }
@@ -25,9 +32,7 @@ h4 {
 }
 
 p, ul{
-    font-family: 'Pontano Sans', Helvetica, Arial, sans-serif;
-    font-size: 13px;
-    color:$gris;
+    @include lato(400, 14px, $gris);
 }
 
 #welcome {
@@ -40,24 +45,21 @@ p, ul{
     width:100%;
     display: block;
     background-size: cover;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 700;
     &.blur{
         filter: blur(5px);
     }
     .hero-info{
         padding: 1.2em 0 0 0;
         position: absolute;
-        top: 58%;
-        left: 0;
-        right: 35%;
+        top: 70%;
         background-color: rgba(10,10,10,0.6);
         color: #fff;
         transition: 0.5s ease-in-out all;
         @include gridle_hide(mobile);
         h1{
+            @include open-sans(800, 3em, #fff);
+            text-align: left;
             margin: 0;
-            font-size: 3em;
             width:90%;
             padding: 0 20px 0 0;
             float: right;
@@ -65,13 +67,13 @@ p, ul{
             line-height: 1;
             font-weight: bold;
             text-transform: uppercase;
-            text-shadow: -0.1em 0.1em 0 rgba(20,20,20,0.25);
-            color:#fff;
+            text-shadow: -0.1em 0.1em 0 rgba(20,20,20,0.15);
         }
         p{
+        	color: white;
             font-size: 1.5em;
             line-height: 1.2;
-            margin: 0.6em 0 1.1em;
+            margin: 0 0 1.1em;
             width:90%;
             padding: 0 20px 0 0;
             float: right;

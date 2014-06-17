@@ -26,7 +26,11 @@ body {
     @include width;
     padding-bottom: 30px;
     h2 {
-    	padding-top: 40px;
+    	padding-top: 55px;
+    	@include gridle_state(mobile tablet) {
+    		font-size: 20px;
+    		padding: 55px 20px 0 20px;
+    	}
     }
     &.quote{
         background: url('/images/comillas1.png') no-repeat left top, url('/images/comillas2.png') no-repeat right bottom;

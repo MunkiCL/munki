@@ -3,18 +3,21 @@
 	margin: 0;
 	padding: 0;
 	border: 0;
-	margin-bottom: 70px;
 	background-color:#fff;
 	#projects_holder{
-		height:720px;
+		height: 100%;
 		padding: 0;
 		border: 0;
 		width:100%;
 		// margin-right:3%;
 		// margin-left:3%;
 		margin-top:30px;
+		@include gridle_state(giant){
+			width:1400px;
+			margin-left: auto;
+			margin-right: auto;
+		}
 		.slider{
-			height:100%;
 			padding:0;
 		}
 		.slider-arrow {
@@ -23,7 +26,8 @@
 			height: 28px;
 			display: block;
 			padding: 0;
-			margin-bottom: -140px;
+			margin-bottom: 0;
+			
 		}
 		.slider-arrow--right {
 			margin-right: -20px;
@@ -43,69 +47,118 @@
 			padding:0;
 			.image{
 				@include gridle(8);
-				@include gridle(8, mobile);
+				@include gridle(7, tablet);
+				@include gridle(12, mobile);
 				z-index:1;
-				height:700px;
+				height:670px;
+				@include gridle_state(tablet){
+					height: 500px;
+				};
+				@include gridle_state(mobile){
+					height: 200px;
+				};
 				&.left{
-					margin-left: -10px;
-					img{
-						margin-left: -10px;
-					}
+					float: left;
 				}
 				&.right{
-					margin-right: -10px;	
+					float: right;	
 				}
 				&.ecotetera{
-					background: #fff url('#{$baseurl}/images/proyectos/ecotetera.png') no-repeat center center;
+					background: #fff url('#{$baseurl}/images/proyectos/ecotetera.jpg') no-repeat center left;
+					@include gridle_state(tablet mobile){
+						background-position: center center;
+					};
+					@include gridle_state(mobile){
+						background: #fff url('#{$baseurl}/images/proyectos/ecotetera-small.jpg') no-repeat;
+						background-size: cover;
+					}
 				}
 				&.ayelen{
-					background: #fff url('#{$baseurl}/images/proyectos/ayelen.png') no-repeat center center;	
+					background: #fff url('#{$baseurl}/images/proyectos/ayelen.jpg') no-repeat center left;
+					@include gridle_state(tablet mobile){
+						background-position: center center;
+					};
+					@include gridle_state(mobile){
+						background: #fff url('#{$baseurl}/images/proyectos/ayelen-small.jpg') no-repeat;
+						background-size: cover;
+					}
 				}
 				&.viverelajacion{
-					background: #fff url('#{$baseurl}/images/proyectos/viverelajacion.png') no-repeat center center;	
+					background: #fff url('#{$baseurl}/images/proyectos/viverelajacion.jpg') no-repeat center right;
+					@include gridle_state(tablet mobile){
+						background-position: center center;
+					};
+					@include gridle_state(mobile){
+						background: #fff url('#{$baseurl}/images/proyectos/viverelajacion-small.jpg') no-repeat;
+						background-size: cover;
+					}
 				}
 				&.offers{
-					background: #fff url('#{$baseurl}/images/proyectos/offers.png') no-repeat center center;	
-					margin-left:-6%;
+					background: #fff url('#{$baseurl}/images/proyectos/offers.jpg') no-repeat center right;
+					@include gridle_state(tablet mobile){
+						background-position: center center;
+					};
+					@include gridle_state(mobile){
+						background: #fff url('#{$baseurl}/images/proyectos/offers-small.jpg') no-repeat;
+						background-size: cover;
+					}
 				}
 				&.sibib{
-					background: #fff url('#{$baseurl}/images/proyectos/sibib.png') no-repeat center center;	
+					background: #fff url('#{$baseurl}/images/proyectos/sibib.jpg') no-repeat center left;
+					@include gridle_state(tablet mobile){
+						background-position: center center;
+					};
+					@include gridle_state(mobile){
+						background: #fff url('#{$baseurl}/images/proyectos/sibib-small.jpg') no-repeat;
+						background-size: cover;
+					}
+				}
+				&.sotodelrio{
+					background: #fff url('#{$baseurl}/images/proyectos/sotodelrio.jpg') no-repeat center right;
+					@include gridle_state(tablet mobile){
+						background-position: center center;
+					};
+					@include gridle_state(mobile){
+						background: #fff url('#{$baseurl}/images/proyectos/sotodelrio-small.jpg') no-repeat;
+						background-size: cover;
+					}
 				}
 			}
 			.text{
 				@include gridle(4);
-				@include gridle(4, tablet);
-				@include gridle_hide( mobile);
+				@include gridle(5, tablet);
+				@include gridle(12, mobile);
 				z-index:90;
+				padding: 0 40px;
 				background-color:#fff;
-				height:100%;
+				@include gridle_state(mobile) {
+					padding: 0 15px;
+				}
 				h2{
-					@include open-sans(800, 25px,$purple );
-					text-transform: uppercase;
+					@include open-sans(300, 18px,$gris);
+					margin-bottom: 0;
 					text-align: left;
 					strong{
-						color:$gris;
+						@include open-sans(800, 25px,$purple);
 					}
-					@include gridle_state(mobile table) {
-			        	font-size: 22px;
+					@include gridle_state(mobile tablet) {
+			        	font-size: 18px;
+			        	margin-top: 20px;
 			        }
-
+			        @include gridle_state(mobile) {
+			        	text-align: center;
+			        }
 				}
 				p{
-					font-family: 'Pontano Sans', Helvetica, Arial, sans-serif;
-				    font-size: 14px;
-				    color:$gris;
-					line-height: 14x;
-					@include gridle_state(mobile table) {
-			        	font-size: 12px;
-			        }
-			        text-align:left;
+					@include lato(400, 14px, $gris);
+					line-height: 1em;
 			        text-transform: none;
-			        strong{
-			        	font-family: 'Roboto', sans-serif;
-			        	font-weight: 700;
+			        strong {
+			        font-weight: 700;
 			        }
-
+			        @include gridle_state(mobile) {
+			        	margin-top: 5px;
+			        }
 				}
 				.quote{
 					background: url('/images/comillas1.png') no-repeat left top, url('/images/comillas2.png') no-repeat right bottom;
@@ -120,41 +173,24 @@
 		            }
 				}
 				a.button{
-					top:5%;
-					color:$gris;
-					width:200px;
-					height:50px;
-					box-sizing:border-box;
-					outline:none;
-					position:relative;
-					display:block;
-					border:1px #222 dotted;
-					margin-left:25%;
-					margin-right:25%;
-					@include transition(0.4s);
-					@include gridle_state(mobile table) {
-			        	width:120px;
-			        	margin-left:2%;
-			        }
-					&:hover {
-						background-color: darken(#fff, 10%);
+					@include lato(400, 18px, lighten($gris, 30%));
+					margin-top: 10px;
+					max-width: 150px;
+					position: relative;
+					display: block;
+					border: 2px lighten($gris, 30%) solid;
+					margin-right: auto;
+					line-height: 2em;
+					padding: 2px;
+					text-align: center;
+					text-decoration: none;
+					@include gridle_state(mobile) {
+						margin: 10px auto 25px auto;
 					}
-					
-					.label{
-						position:absolute;
-						top:0;
-						left:0;
-						display:block;
-						width: 100%;
-						line-height:50px;
-						padding: 0 45px;
-						font-size: 18px;
-						font-family: 'Pontano Sans', Helvetica, Arial, sans-serif;
-						@include gridle_state(mobile table) {
-				        	font-size:16px;
-				        	left:-25px;
-
-				        }
+					@include transition(0.4s);
+					&:hover {
+						border: 2px $gris solid;
+						color: $gris;
 					}
 				}
 			}

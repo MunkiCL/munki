@@ -13,12 +13,12 @@ $(document).ready(function(){
 
 
 
-	var slides = $('.slide');
+	
 
 	var glide = $('.slider').glide({
 		arrowRightText: '',
 		arrowLeftText: '',
-		autoplay:7000,
+		autoplay:10000,
 		circular: true,
 		navigation:false
 		// beforeTransition: function() {
